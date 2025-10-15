@@ -102,8 +102,9 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-6 py-4 lg:flex dark:bg-transparent navbar-enhanced",
+        visible &&
+          "bg-white/90 dark:bg-neutral-950/90 scrolled border border-gray-200/50 dark:border-gray-700/50",
         className
       )}
     >
@@ -127,17 +128,21 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className="nav-item-enhanced relative text-neutral-700 dark:text-neutral-200 hover:text-pink-500 dark:hover:text-purple-400 transition-all duration-300"
           key={`link-${idx}`}
           href={item.link}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="absolute inset-0 h-full w-full rounded-xl bg-gradient-to-r from-pink-500/10 to-purple-500/10 dark:from-pink-400/10 dark:to-purple-400/10"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
             />
           )}
-          <span className="relative z-20">{item.name}</span>
+          <span className="relative z-20 font-medium">{item.name}</span>
         </a>
       ))}
     </motion.div>
@@ -164,8 +169,9 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         damping: 50,
       }}
       className={cn(
-        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-3 lg:hidden navbar-enhanced",
+        visible &&
+          "bg-white/90 dark:bg-neutral-950/90 border border-gray-200/50 dark:border-gray-700/50",
         className
       )}
     >
