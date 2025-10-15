@@ -39,13 +39,11 @@ export const Navbar = () => {
             href="#"
             className="logo-container relative z-20 mr-8 flex items-center space-x-3 px-3 py-2 text-sm font-bold"
           >
-            <div className="logo-bg flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-purple-500 p-2.5 shadow-lg">
-              <img
-                src="/meetmuxLogo.svg"
-                alt="MeetMux Logo"
-                className="h-full w-full object-contain filter brightness-0 invert"
-              />
-            </div>
+            <img
+              src="/asets/meetmuxLogo.svg"
+              alt="MeetMux Logo"
+              className="h-full w-full object-contain filter brightness-0 invert"
+            />
           </a>
         </div>
 
@@ -81,7 +79,7 @@ export const Navbar = () => {
           >
             <div className="logo-bg flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-pink-500 to-purple-500 p-2 shadow-lg">
               <img
-                src="/meetmuxLogo.svg"
+                src="assets/meetmuxLogo.svg"
                 alt="MeetMux Logo"
                 className="h-full w-full object-contain filter brightness-0 invert"
               />
