@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -8,7 +8,6 @@ const links = [
   { title: "Features", href: "#features" },
   { title: "FAQ", href: "#FAQ" },
   { title: "Career", href: "#careers" },
-
 ];
 
 const Navbar = () => {
@@ -21,8 +20,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-
 
   // Motion variants for light mode
   const variants = {
@@ -68,10 +65,8 @@ const Navbar = () => {
             >
               {link.title}
             </a>
-
           </div>
         ))}
-
       </div>
       <div className="md:hidden">
         <button onClick={() => setMenuOpen(!menuOpen)}>
@@ -79,9 +74,7 @@ const Navbar = () => {
         </button>
       </div>
       {menuOpen && (
-        <div
-          className="absolute top-full right-0 mt-2 w-40 md:hidden bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col overflow-hidden z-50"
-        >
+        <div className="absolute top-full right-0 mt-2 w-40 md:hidden bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col overflow-hidden z-50">
           {links.map((link, idx) => (
             <div key={link.title} className="w-full">
               <a
@@ -98,9 +91,6 @@ const Navbar = () => {
           ))}
         </div>
       )}
-
-
-
     </motion.div>
   );
 };
