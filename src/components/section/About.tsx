@@ -1,3 +1,3 @@
 export const About = () => {
-  return <div>About</div>;
+  return <div className="min-h-screen flex justify-center">About</div>;
 };

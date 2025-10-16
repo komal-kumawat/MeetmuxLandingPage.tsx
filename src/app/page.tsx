@@ -8,7 +8,7 @@ import { Faq } from "@/components/section/Faq";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col">
       <Navbar />
       <Hero />
       <section id="about">
